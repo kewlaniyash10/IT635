@@ -27,7 +27,7 @@ while True:
         result = cur.fetchall();
         print(result)
     
-    print("End of Result \n")
+    print("\n End of Result \n")
     conn.commit()
 
 conn.close()
