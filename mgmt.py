@@ -13,7 +13,7 @@ while True:
     print("Fetching Results... \n")
     
     cur.execute ("""
-    SELECT issue, department, first_name, last_name FROM %s WHERE issue = %s; 
+    SELECT issue, department, first_name, last_name FROM '%s' WHERE issue = %s; 
     """ ,  (department, issue_id));
     
     result = cur.fetchall();
