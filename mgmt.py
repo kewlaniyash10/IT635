@@ -19,7 +19,6 @@ while True:
         result = cur.fetchall();
         print(result)
         conn.commit()
-        conn.close()
         
     elif d == 2:
         cur.execute ("""
@@ -28,6 +27,6 @@ while True:
         result = cur.fetchall();
         print(result)
         conn.commit()
-        conn.close()   
-        
+    
+    conn.close()       
     print("\n End of Result \n")
