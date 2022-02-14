@@ -8,9 +8,9 @@ while True:
     department = input("Enter department name: ")
     issue_id = input("Enter issue number: ")
     print("Fetching Results... ")
-    cur.execute ('''
+    cur.execute ("""
     SELECT * FROM %s WHERE issue = %s RETURNING issue, department, first_name, last_name; 
-    ''' , (department, issue_id));
+    """ , (department, issue_id));
     
     result = cur.fetchall();
     print(result)
