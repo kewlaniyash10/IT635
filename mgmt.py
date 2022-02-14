@@ -21,7 +21,7 @@ while True:
         conn.commit()
         conn.close()
         
-    else:
+    elif department == 2:
         cur.execute ("""
         SELECT issue, department, first_name, last_name FROM FINANCE WHERE issue = %s; 
         """ ,  (issue_id));
