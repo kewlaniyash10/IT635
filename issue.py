@@ -8,7 +8,7 @@ while True:
     issue_id = input("Enter issue number: ")
     print("Fetching Results... ")
     cur.execute ("""
-    SELECT * FROM HR WHERE issue = %s RETURNING issue, department, first_name, last_name; 
+    SELECT issue, department, first_name, last_name FROM HR WHERE issue = %d  ; 
     """ ,  (issue_id));
     
     result = cur.fetchall();
