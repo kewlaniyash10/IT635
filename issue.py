@@ -10,7 +10,7 @@ while True:
     print("Fetching Results... ")
     cur.execute ('''
     SELECT * FROM %s WHERE issue = %s RETURNING issue, department, first_name, last_name; 
-    ''' , (issue_id, department));
+    ''' , (department, issue_id));
     
     result = cur.fetchall();
     print(result)
