@@ -1,6 +1,6 @@
 import psycopg2
 
-conn = psycopg2.connect("postgresql://it_admin:ilovesql@localhost/project")
+conn = psycopg2.connect("postgresql://admin:ilovesql@localhost/project")
 cur = conn.cursor()
 
 while True:
