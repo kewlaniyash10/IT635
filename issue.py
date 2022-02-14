@@ -5,7 +5,6 @@ cur = conn.cursor()
 
 while True:
     print("Issue Management System ")
-    department = input("Enter department name: ")
     issue_id = input("Enter issue number: ")
     print("Fetching Results... ")
     cur.execute ("""
