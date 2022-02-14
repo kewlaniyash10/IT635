@@ -17,4 +17,3 @@ while True:
     conn.commit()
 
 conn.close()
-
