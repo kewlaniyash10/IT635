@@ -16,13 +16,16 @@ while True:
         cur.execute ("""
         SELECT issue, department, first_name, last_name FROM HR WHERE issue = %s; 
         """ ,  (issue_id));
+        
+         result = cur.fetchall();
+        print(result)
     else:
         cur.execute ("""
         SELECT issue, department, first_name, last_name FROM FINANCE WHERE issue = %s; 
         """ ,  (issue_id));
     
-    result = cur.fetchall();
-    print(result)
+        result = cur.fetchall();
+        print(result)
     
     print("End of Result \n")
     conn.commit()
