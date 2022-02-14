@@ -28,6 +28,6 @@ while True:
         print(result)
         conn.commit()
     
-    conn.close()       
     print("\n End of Result \n")
+conn.close()           
 print("\Bye Bye!")
