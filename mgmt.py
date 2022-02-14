@@ -17,7 +17,7 @@ while True:
         SELECT issue, department, first_name, last_name FROM HR WHERE issue = %s; 
         """ ,  (issue_id));
         
-         result = cur.fetchall();
+        result = cur.fetchall();
         print(result)
     else:
         cur.execute ("""
