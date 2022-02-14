@@ -31,4 +31,3 @@ while True:
         conn.close()   
         
 print("\n End of Result \n")
-  
