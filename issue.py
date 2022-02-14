@@ -4,9 +4,9 @@ conn = psycopg2.connect("postgresql://admin:ilovesql@localhost/project")
 cur = conn.cursor()
 
 while True:
+    print("Issue Management System ")
     department = input("Enter department name: ")
-    print("Please enter issue ID: ")
-    issue_id = int(input())
+    issue_id = input("Enter issue number: ")
     print("Fetching Results... ")
     cur.execute ('''
     SELECT * FROM %s WHERE issue = %s RETURNING issue, department, first_name, last_name; 
